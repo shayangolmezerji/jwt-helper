@@ -175,7 +175,7 @@ See LICENSE file.
 > Your contributions mean a lot!
 > 
 > **BTC:** bc1qv8tgypmq68jw4ela5ev7y8s4zmt8kk7ks96zvg  
-> **ETH:** bc1qv8tgypmq68jw4ela5ev7y8s4zmt8kk7ks96zvg  
+> **ETH:** 0xc3D6BD5EA169006B30cfdAB5998A992A5a93191C  
 > **TRX:** TFc3kzkXFU8Sk4PDC7iJz64YSXqfTHQMFd  
 > **SOL:** C7o5E16gvk3ueKrNcUWvsPdXmE174s93fpZcP1mePFhs  
 > **TON:** UQAZaNsOBnZL3O0FvXeYSGaTan1d3fe0RHZshpn_uDrDG3qj  
