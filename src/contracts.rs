@@ -3,7 +3,6 @@
 /// All structures are optimized for zero-copy serialization using rkyv.
 /// Field ordering is carefully designed to minimize padding and maximize
 /// serialization efficiency while maintaining intuitive field ordering.
-
 use rkyv::{Archive, Deserialize, Serialize};
 
 /// Fixed size for AI/ML anomaly vector (from ML team specification)

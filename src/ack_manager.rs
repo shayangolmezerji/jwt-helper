@@ -2,7 +2,6 @@
 /// 
 /// Implements custom minimal ACK/NACK protocol over UDP for guaranteed delivery
 /// of critical alerts. Uses exponential backoff for retransmissions.
-
 use std::net::UdpSocket;
 use std::time::{Duration, Instant, SystemTime, UNIX_EPOCH};
 

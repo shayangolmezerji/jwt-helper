@@ -2,7 +2,6 @@
 /// 
 /// Provides comprehensive error handling with minimal overhead,
 /// designed for production reliability and debugging clarity.
-
 use std::fmt;
 use std::io;
 

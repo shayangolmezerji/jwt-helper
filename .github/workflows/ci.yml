@@ -68,11 +68,4 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - run: cargo bench --no-run
       - name: Run benchmarks
-        run: cargo bench -- --output-format bencher | tee output.txt
-      - name: Store benchmark result
-        uses: benchmark-action/github-action-benchmark@v1
-        with:
-          tool: 'cargo'
-          output-file-path: output.txt
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
+        run: cargo bench 2>&1 | tee output.txt

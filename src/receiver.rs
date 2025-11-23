@@ -2,7 +2,6 @@
 /// 
 /// Implements zero-copy deserialization with integrity verification.
 /// Optimized for maximum throughput with minimal latency.
-
 use std::net::UdpSocket;
 use std::time::Instant;
 

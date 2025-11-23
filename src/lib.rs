@@ -11,7 +11,6 @@
 /// - Minimal external dependencies (std + tokio only)
 /// - Optimized for latency-critical operations
 /// - Production-grade security and reliability
-
 pub mod errors;
 pub mod contracts;
 pub mod transmitter;

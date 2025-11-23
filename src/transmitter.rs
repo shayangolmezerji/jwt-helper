@@ -2,7 +2,6 @@
 /// 
 /// Handles serialization and transmission of SensorPayload over raw UDP.
 /// Optimized for minimal latency with zero unnecessary allocations.
-
 use std::net::UdpSocket;
 use std::time::Instant;
 
