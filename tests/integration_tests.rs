@@ -32,10 +32,10 @@ mod statistical_analysis {
                 samples: samples.to_vec(),
                 mean,
                 stddev,
-                p50: sorted[(samples.len() / 2) as usize],
-                p95: sorted[(samples.len() * 95 / 100) as usize],
-                p99: sorted[(samples.len() * 99 / 100) as usize],
-                p999: sorted[(samples.len() * 999 / 1000) as usize],
+                p50: sorted[(samples.len() / 2)],
+                p95: sorted[(samples.len() * 95 / 100)],
+                p99: sorted[(samples.len() * 99 / 100)],
+                p999: sorted[(samples.len() * 999 / 1000)],
                 min: sorted[0],
                 max: sorted[sorted.len() - 1],
             }
@@ -169,7 +169,7 @@ fn test_zero_copy_validation() {
     
     let payload = SensorPayload::new(
         999, 1234567890, 2, 42, 10000, 0x12345678,
-        [0.123456789; ANOMALY_VECTOR_SIZE],
+        [0.123_456_79; ANOMALY_VECTOR_SIZE],
     ).unwrap();
     
     let bytes = Transmitter::serialize_batch(&[payload]).unwrap()[0].clone();
@@ -354,13 +354,13 @@ fn test_concurrent_serialization_safety() {
 
 #[test]
 fn test_anomaly_vector_precision() {
-    let test_values = vec![
+    let test_values = [
         0.0, 0.1, 0.5, 0.9, 1.0, f32::MIN_POSITIVE, f32::MAX / 2.0
     ];
     
     let _payload = SensorPayload::new(
         1, 1000, 1, 50, 1000, 0x12345678,
-        [0.123456789; ANOMALY_VECTOR_SIZE],
+        [0.123_456_79; ANOMALY_VECTOR_SIZE],
     ).unwrap();
     
     for (idx, &expected_val) in test_values.iter().enumerate().take(ANOMALY_VECTOR_SIZE) {

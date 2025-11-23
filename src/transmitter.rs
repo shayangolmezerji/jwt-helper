@@ -225,7 +225,7 @@ mod tests {
         assert!(bytes.is_ok());
         
         let bytes = bytes.unwrap();
-        assert!(bytes.len() > 0);
+        assert!(!bytes.is_empty());
         assert!(bytes.len() <= crate::MAX_PAYLOAD_SIZE);
     }
     
